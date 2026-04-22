@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -33,8 +32,6 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-
-
         // 🔵 KE PERTEMUAN 4
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
@@ -53,15 +50,24 @@ class MainActivity : AppCompatActivity() {
         // 🔴 LOGOUT
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(this)
-                .setTitle("Konfirmasi")
-                .setMessage("Apakah Anda yakin ingin melanjutkan?")
+                .setTitle("Konfirmasi Logout")
+                .setMessage("Apakah Anda yakin ingin keluar?")
                 .setPositiveButton("Ya") { dialog, _ ->
+                    // Reset status login saat logout
+                    val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+                    val editor = sharedPref.edit()
+                    editor.putBoolean("isLogin", false)
+                    editor.apply()
+
                     dialog.dismiss()
-                    Log.e("Info Dialog","Anda memilih Ya!")
+                    
+                    // Kembali ke AuthActivity setelah logout
+                    val intent = Intent(this, AuthActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 }
-                .setNegativeButton("Batal") { dialog, _ ->
+                .setNegativeButton("Tidak") { dialog, _ ->
                     dialog.dismiss()
-                    Log.e("Info Dialog","Anda memilih Tidak!")
                 }
                 .show()
         }

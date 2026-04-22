@@ -13,7 +13,6 @@ import com.example.aliya.databinding.ActivityFourthBinding
 import com.example.aliya.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
-
 class FourthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFourthBinding
     override fun onCreate(savedInstanceState: Bundle?) {

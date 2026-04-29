@@ -1,4 +1,4 @@
-package com.example.aliya.pertemuan_7
+package com.example.aliya.Home.pertemuan_7
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.example.aliya.R
 import com.example.aliya.databinding.ActivitySeventhBinding
 
 class SeventhActivity : AppCompatActivity() {

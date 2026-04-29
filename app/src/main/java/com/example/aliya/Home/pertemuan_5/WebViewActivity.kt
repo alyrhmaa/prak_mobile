@@ -1,4 +1,4 @@
-package com.example.aliya.pertemuan_5
+package com.example.aliya.Home.pertemuan_5
 
 import android.graphics.Bitmap
 import android.os.Bundle

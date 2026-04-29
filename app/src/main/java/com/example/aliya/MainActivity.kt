@@ -2,14 +2,16 @@ package com.example.aliya
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aliya.databinding.ActivityMainBinding
+import com.example.aliya.pertemuan_2.SecondActivity
+import com.example.aliya.pertemuan_3.ThirdActivity
 import com.example.aliya.pertemuan_4.FourthActivity
 import com.example.aliya.pertemuan_5.FifthActivity
+import com.example.aliya.pertemuan_7.SeventhActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +34,18 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // 🔵 KE PERTEMUAN 2
+        binding.btnToSecond.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
+        // 🔵 KE PERTEMUAN 3
+        binding.btnToThird.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            startActivity(intent)
+        }
+
         // 🔵 KE PERTEMUAN 4
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
@@ -44,6 +58,12 @@ class MainActivity : AppCompatActivity() {
         // 🔵 KE PERTEMUAN 5
         binding.btnToFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+
+        // 🔵 KE PERTEMUAN 7
+        binding.btnToSeventh.setOnClickListener {
+            val intent = Intent(this, SeventhActivity::class.java)
             startActivity(intent)
         }
 

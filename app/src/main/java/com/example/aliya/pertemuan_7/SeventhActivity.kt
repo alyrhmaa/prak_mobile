@@ -1,45 +1,59 @@
-package com.example.aliya.pertemuan_3
+package com.example.aliya.pertemuan_7
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.aliya.databinding.ActivityThirdBinding
+import androidx.fragment.app.Fragment
 import com.example.aliya.R
+import com.example.aliya.databinding.ActivitySeventhBinding
 
-class ThirdActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityThirdBinding
+class SeventhActivity : AppCompatActivity() {
+    private lateinit var binding: ActivitySeventhBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityThirdBinding.inflate(layoutInflater)
+
+        binding = ActivitySeventhBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
+
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Setup Toolbar
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
+        // Menampilkan fragment pertama secara default
+        replaceFragment(SatuFragment())
 
-        binding.btnKirim.setOnClickListener {
-            val noTujuan = binding.inputNoTujuan.text
-            Toast.makeText(this, "Pesan berhasil terkirim ke $noTujuan", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, ThirdResultActivity::class.java)
-            startActivity(intent)
+        // Setup event click untuk mengganti fragment
+        binding.btnFragment1.setOnClickListener {
+            replaceFragment(SatuFragment())
         }
+
+        binding.btnFragment2.setOnClickListener {
+            replaceFragment(DuaFragment())
+        }
+
+        binding.btnFragment3.setOnClickListener {
+            replaceFragment(TigaFragment())
+        }
+    }
+
+
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(binding.fragmentContainer.id, fragment)
+//            .addToBackStack(null) biar ga bolk blek
+            .commit()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -19,6 +19,12 @@ class FifthActivity : AppCompatActivity() {
         // 🔥 WAJIB: set toolbar jadi ActionBar
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+        
+        // Aktifkan tombol back
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+        }
 
         // Button WebView
         val btn = findViewById<Button>(R.id.btnWeb)
@@ -36,6 +42,10 @@ class FifthActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                return true
+            }
 
             R.id.menu_about -> {
                 Toast.makeText(this, "Ini halaman About", Toast.LENGTH_SHORT).show()

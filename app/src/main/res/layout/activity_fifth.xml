@@ -18,9 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#FF8A65"
-            app:title="Dashboard Pertemuan 5"
+            app:title="Pertemuan 5"
             app:titleCentered="true"
-            app:titleTextColor="@android:color/white"/>
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/abc_ic_ab_back_material"
+            app:navigationIconTint="@android:color/white"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <!-- 🔥 CONTENT -->

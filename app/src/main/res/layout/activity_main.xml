@@ -21,16 +21,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.1" />
 
     <Button
-        android:id="@+id/btnToFourth"
+        android:id="@+id/btnToSecond"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#6C5CE7"
-        android:text="Pertemuan 4"
+        android:backgroundTint="#0984E3"
+        android:text="Pertemuan 2"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         app:cornerRadius="12dp"
@@ -39,12 +39,42 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
+        android:id="@+id/btnToThird"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#6C5CE7"
+        android:text="Pertemuan 3"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnToSecond" />
+
+    <Button
+        android:id="@+id/btnToFourth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#00B894"
+        android:text="Pertemuan 4"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnToThird" />
+
+    <Button
         android:id="@+id/btnToFifth"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#00B894"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#FDCB6E"
         android:text="Pertemuan 5"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
@@ -54,11 +84,26 @@
         app:layout_constraintTop_toBottomOf="@+id/btnToFourth" />
 
     <Button
+        android:id="@+id/btnToSeventh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#E17055"
+        android:text="Pertemuan 7"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnToFifth" />
+
+    <Button
         android:id="@+id/btnLogout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="#FF7675"
         android:text="Logout"
         android:textAllCaps="false"
@@ -66,6 +111,6 @@
         app:cornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnToFifth" />
+        app:layout_constraintTop_toBottomOf="@+id/btnToSeventh" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,7 @@ import com.example.aliya.Home.pertemuan_3.ThirdActivity
 import com.example.aliya.Home.pertemuan_4.FourthActivity
 import com.example.aliya.Home.pertemuan_5.FifthActivity
 import com.example.aliya.Home.pertemuan_7.SeventhActivity
+import com.example.aliya.Home.pertemuan_9.NinthActivity
 import com.example.aliya.R
 import com.example.aliya.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -69,6 +70,11 @@ class HomeFragment : Fragment() {
         // 🔵 KE PERTEMUAN 7
         binding.btnToSeventh.setOnClickListener {
             val intent = Intent(requireContext(), SeventhActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToNinth.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
             startActivity(intent)
         }
 

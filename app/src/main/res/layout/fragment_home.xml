@@ -133,11 +133,26 @@
         app:layout_constraintTop_toBottomOf="@+id/btnToSeventh" />
 
     <Button
+        android:id="@+id/btnToTenth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#E17055"
+        android:text="Pertemuan 10"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnToNinth" />
+
+    <Button
         android:id="@+id/btnLogout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="#FF7675"
         android:text="Logout"
         android:textAllCaps="false"

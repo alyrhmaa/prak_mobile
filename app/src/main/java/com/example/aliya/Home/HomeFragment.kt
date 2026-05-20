@@ -17,6 +17,7 @@ import com.example.aliya.Home.pertemuan_7.SeventhActivity
 import com.example.aliya.Home.pertemuan_9.NinthActivity
 import com.example.aliya.R
 import com.example.aliya.databinding.FragmentHomeBinding
+import com.example.aliya.pertemuan_10.TenthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class HomeFragment : Fragment() {
@@ -75,6 +76,10 @@ class HomeFragment : Fragment() {
 
         binding.btnToNinth.setOnClickListener {
             val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnToTenth.setOnClickListener {
+            val intent = Intent(requireContext(), TenthActivity::class.java)
             startActivity(intent)
         }
 

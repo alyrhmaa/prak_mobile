@@ -13,6 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.aliya.AuthActivity
 import com.example.aliya.Data.Api.PhotoApiClient
+import com.example.aliya.Home.Pertemuan_13.ThirteenthActivity
 import com.example.aliya.Home.Photo.PhotoAdapter
 import com.example.aliya.Home.pertemuan_2.SecondActivity
 import com.example.aliya.Home.pertemuan_3.ThirdActivity
@@ -86,6 +87,11 @@ class HomeFragment : Fragment() {
         }
         binding.btnToTenth.setOnClickListener {
             val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToThirteenth.setOnClickListener {
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
             startActivity(intent)
         }
 

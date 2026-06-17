@@ -36,10 +36,9 @@
         android:textColor="#2D3436"
         android:textSize="32sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_bias="0.15" />
 
     <!-- BARIS 1 -->
@@ -152,15 +151,32 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         app:cornerRadius="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/btnLogout"
+        app:layout_constraintEnd_toStartOf="@+id/btnToThirteenth"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnToSeventh" />
 
     <Button
-        android:id="@+id/btnLogout"
+        android:id="@+id/btnToThirteenth"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#E17055"
+        android:text="Pertemuan 13"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnToTenth"
+        app:layout_constraintTop_toTopOf="@+id/btnToTenth" />
+
+    <!-- BARIS 5 -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:backgroundTint="#FF7675"
         android:text="Logout"
@@ -168,8 +184,8 @@
         android:textColor="@android:color/white"
         app:cornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnToTenth"
-        app:layout_constraintTop_toTopOf="@+id/btnToTenth" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnToTenth" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvGallery"
